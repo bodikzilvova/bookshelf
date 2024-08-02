@@ -1,0 +1,91 @@
+// автор Євгенія
+
+.sidebar_shoping_list {
+    display: none;
+    flex-direction: column;
+}
+
+@media (min-width: 1440px) {
+.sidebar_shoping_list {
+        display: block;
+    }
+}
+
+.shoping_list_container {
+    width: 100%;
+}
+
+.shoping_list_title {
+    color: var(--var-text-fc);
+    font-size: 32px;
+    line-height: 38px;
+}
+ @media (min-width: 768px) {
+    .shoping_list_title {
+        font-size: 48px;
+        line-height: 52px;
+    }
+ }
+
+.shoping_list_title_brand {
+    color: $clr-brand;
+    margin-right: auto;
+}
+
+.shoping_list_box {
+    width: 265px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+}
+
+@media (min-width: 768px) {
+    .shoping_list_box {
+        width: 349px;
+        margin-top: 140px;
+    }
+}
+
+.shoping_list_text {
+    display: block;
+    color: var(--var-shop-list-text) ;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.28px;
+
+    margin: 0 10.5px 14px 10.5px;
+ }
+
+ @media (min-width: 768px) {
+    .shoping_list_text {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.36px;
+        margin: 0 0 20px;
+        }
+ }
+
+ .shoping_list_image {
+    width: 265px;
+ }
+
+ @media (min-width: 768px) {
+    .shoping_list_image {
+        display: block;
+        width: 322px;
+        margin-left: 13.5px;
+        margin-right: 13.5px;
+    }
+ }
+
+//  =========== books from local-storige ========
+
+.shoping_list_books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    width: 100%;
+    margin-top: 40px;
+}

@@ -1,0 +1,181 @@
+.mobile-menu_container {
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-width: 380px;
+  background: rgba(46, 47, 66, 0.4);
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease-out;
+}
+
+.mobile-menu_container.mobile-menu_is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-menu_guest {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: flex;
+  overflow: hidden;
+  padding: 104px 20px 0 20px;
+  width: 100%;
+  height: 100%;
+  transition: left 0.5s ease-out;
+}
+
+.mobile-menu_user {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: start;
+  padding: 84px 20px 20px 20px;
+  transition: left 0.5s ease-out;
+}
+
+.mobile-menu_guest.open,
+.mobile-menu_user.open {
+  left: 0;
+}
+
+.mobile-menu_guest::before,
+.mobile-menu_user::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(
+    189.32% 190.93% at 59.76% -23.42%,
+    #4f2ee8 18.03%,
+    #fff 100%
+  );
+}
+
+.mobile-menu_btn {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+
+  border-radius: 18px;
+  border: 1.5px solid #111;
+}
+
+.mobile-menu_btn.log-in_btn {
+  width: 184px;
+  height: 48px;
+  padding: 14px;
+  background: #4f2ee8;
+}
+
+.mobile-menu_btn.log-out_btn {
+  gap: 4px;
+  padding: 14px 24px;
+  background: #fff;
+}
+
+.mobile-menu_btn span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.56px;
+}
+
+.mobile-menu_btn.log-in_btn span {
+  color: #fff;
+}
+
+.mobile-menu_btn.log-out_btn span {
+  color: #111;
+}
+
+.mobile-menu_icon_btn {
+  stroke: #eac645;
+  width: 20px;
+  height: 20px;
+}
+
+.user_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 126px;
+}
+
+.user_avatar {
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background: lightgray 50% / cover no-repeat;
+}
+
+.user_name {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.44px;
+}
+
+.background-gallery {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 380px;
+  background-image: url('../images/mobile-home/books-min.png');
+  background-repeat: no-repeat;
+  background-size: 380px 380px;
+  z-index: -1;
+}
+
+.nav-list.mobile_nav-list {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+.nav-list.mobile_nav-list .nav-link {
+  color: #fff;
+}
+
+.nav-list.mobile_nav-list .nav-link.current,
+.nav-list.mobile_nav-list .nav-link:hover,
+.nav-list.mobile_nav-list .nav-link:focus,
+.nav-list.mobile_nav-list .nav-link:active {
+  color: #111;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu_container {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
